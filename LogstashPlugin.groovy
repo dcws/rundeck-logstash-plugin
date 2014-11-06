@@ -9,7 +9,7 @@ import com.dtolabs.rundeck.core.logging.LogLevel;
 rundeckPlugin(StreamingLogWriterPlugin){
     configuration{
         host defaultValue:"localhost", required:true, description: "Hostname to connect to"
-        port required:true, description: "Port to connect to", type: 'Integer
+        port required:true, description: "Port to connect to", type: 'Integer'
         type defaultValue:"rundeck", required: true, description: "The type to set"
     }
     /**
