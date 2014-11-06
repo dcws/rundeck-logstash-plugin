@@ -16,6 +16,7 @@ The plugin supports these configuration properties:
 
 * `host` - hostname of the logstash server
 * `port` - TCP port to send JSON data to
+* 'type' - Type to set in the JSON so you don't need to open another port
 
 You can update the your framework/project.properties file to set these configuration values:
 
@@ -23,11 +24,13 @@ in `framework.properties`:
 
     framework.plugin.StreamingLogWriter.LogstashPlugin.port=9700
     framework.plugin.StreamingLogWriter.LogstashPlugin.host=localhost
+    ramework.plugin.StreamingLogWriter.LogstashPlugin.type=rundeck
 
 or in `project.properties`:
 
     project.plugin.StreamingLogWriter.LogstashPlugin.port=9700
     project.plugin.StreamingLogWriter.LogstashPlugin.host=localhost
+    project.plugin.StreamingLogWriter.LogstashPlugin.type=rundeck
 
 # Configure Logstash
 
