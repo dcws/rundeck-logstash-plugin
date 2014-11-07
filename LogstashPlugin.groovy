@@ -24,7 +24,7 @@ rundeckPlugin(StreamingLogWriterPlugin){
         
         [socket:socket, count:0, executionid:execution.execid, write:{
             socketStream<< json.writeValueAsString(e2 + it) + "\n"            
-        }]
+        }, logtype:config.logtype]
     }
 
     /**
@@ -39,7 +39,7 @@ rundeckPlugin(StreamingLogWriterPlugin){
         event.metadata?.each{ emeta["event.${it.key}"]=it.value }
 
         def data= emeta + [
-            type:config.logtype,
+            type:context.logtype,
             line:context.count,
             datetime:event.datetime.time,
             loglevel:event.loglevel.toString(),
